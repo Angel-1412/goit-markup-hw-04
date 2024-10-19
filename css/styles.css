@@ -28,6 +28,8 @@ img {
 
 header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container {
@@ -75,7 +77,29 @@ header .container {
 }
 .li-nav {
   color: #2e2f42;
+  position: relative;
+  color: #404bbf;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.li-nav::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+.li-nav:hover::after {
+  opacity: 1;
+}
+
 .li-nav:hover {
   color: #404bbf;
 }
@@ -109,7 +133,10 @@ header .container {
 }
 .contact-address {
   color: #434455;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contact-address:hover {
   color: #404bbf;
 }
@@ -119,10 +146,15 @@ header .container {
 
 .text-button {
   background-color: #2e2f42;
-  background-image: url(../images/people-office.jpg);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 1440px;
   padding: 188px 0;
   margin: 0 auto;
 }
@@ -132,6 +164,7 @@ header .container {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1 {
@@ -199,6 +232,17 @@ h1 {
   width: calc((100% - 72px) / 4);
 }
 
+.svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
+}
+
 .list-p {
   font-weight: 400;
   font-size: 16px;
@@ -230,6 +274,8 @@ h1 {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-people {
   font-weight: 500;
@@ -254,6 +300,37 @@ h1 {
   text-align: center;
   color: #434455;
 }
+
+.site {
+  padding-top: 8px;
+}
+
+.site-team {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-icons {
+  width: 40px;
+  height: 40px;
+}
+
+.social-links {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links :hover,
+.social-links :focus {
+  background-color: #404bbf;
+}
+
 .portfolio {
   font-weight: 700;
   font-size: 36px;
