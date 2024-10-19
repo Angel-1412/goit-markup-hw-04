@@ -301,10 +301,6 @@ h1 {
   color: #434455;
 }
 
-.site {
-  padding-top: 8px;
-}
-
 .site-team {
   display: flex;
   justify-content: center;
@@ -314,6 +310,7 @@ h1 {
 .social-icons {
   width: 40px;
   height: 40px;
+  margin-top: 8px;
 }
 
 .social-links {
@@ -464,10 +461,10 @@ h1 {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link :hover {
+.social-item :hover {
   background-color: #31d0aa;
 }
-.social-link :focus {
+.social-item :focus {
   background-color: #31d0aa;
 }
 
