@@ -409,12 +409,12 @@ h1 {
   padding: 100px 0;
 }
 
-.footer-content {
+.footer .container {
   display: flex;
   align-items: baseline;
 }
-.footer-content .container {
-  margin-left: 156px;
+
+.footer-content {
   margin-right: 120px;
 }
 
